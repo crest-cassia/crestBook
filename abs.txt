@@ -1,0 +1,22 @@
+%%  -*- Mode: Memo -*-
+=begin
+
+= CREST book
+
+== Title
+
+   Project CASSIA
+   --- Framework for Exhaustive and Large-scale Social Simulation ---
+
+== Author
+
+   Itsuki Noda (AIST),
+   Yohsuke Murase (Riken),
+   Nobuyasu Ito (Univ. Tokyo & Riken),
+   Kiyoshi Izumi (Univ. Tokyo),
+   Hiromitsu Hattori (Ritsumei Univ.),
+   Tomio Kamada (Kobe Univ.),
+   Hideyuki Mizuta (IBM)
+
+
+
