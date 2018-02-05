@@ -1,0 +1,54 @@
+%%--------------------------------------------------
+\subsection{Pedestrian Simulation}
+\label{ss:Pedestrian Simulation}
+%% - - - - - - - - - - - - - - - - - - - - - - - - -
+(Noda)
+
+CASSIA Framework can illustrate a trade-off structure in planning of
+evacuations from disasters.  Optimization in disaster responses is
+serious requirements for local governments. But, such optimization
+includes multiple objective functions.  So, the important issue is how
+to understand trade-off structures of such multi-objective functions
+over large number of policy options.
+
+We apply our framework to evaluate evacuation plans, which have over
+300 control parameters, to find out such trade-off.  We implement
+NSGA-II algorithm to search optimal structures over large parameter
+spaces, and utilize the performance of K-computers to speed-up the
+process.
+
+%%++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+\begin{figure}
+  \centering
+  \includegraphics[width=.8\linewidth]{Figs.noda/figure-08.nishiyodogawa.eps}
+  \caption{Nishiyodogawa Area used in Pedestrian Simulation}
+  \label{fig:Figs.noda/figure-08.nishiyodogawa.eps}
+\end{figure}
+%%++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+%%++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+\begin{figure}
+  \centering
+  \includegraphics[width=.8\linewidth]{Figs.noda/figure-09.evac_rule.eps}
+  \caption{Rule Entropy}
+  \label{fig:Figs.noda/figure-09.evac_rule.eps}
+\end{figure}
+%%++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+%%++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+\begin{figure}
+  \centering
+  \includegraphics[width=.8\linewidth]{Figs.noda/figure-10.evac_narrow.eps}
+  \caption{Result of Evacuation Simulation (narrow road)}
+  \label{fig:Figs.noda/figure-10.evac_narrow.eps}
+\end{figure}
+%%++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+%%++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+\begin{figure}
+  \centering
+  \includegraphics[width=.8\linewidth]{Figs.noda/figure-11.evac_wide.eps}
+  \caption{Result of Evacuation Simulation (wide road)}
+  \label{fig:Figs.noda/figure-11.evac_wide.eps}
+\end{figure}
+%%++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
