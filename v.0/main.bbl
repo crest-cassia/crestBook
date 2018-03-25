@@ -1,0 +1,103 @@
+\def\Ignore{}
+\begin{thebibliography}{10}
+\providecommand{\url}[1]{{#1}}
+\providecommand{\urlprefix}{URL }
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{DOI~\discretionary{}{}{}#1}\else
+  \providecommand{\doi}{DOI~\discretionary{}{}{}\begingroup
+  \urlstyle{rm}\Url}\fi
+
+\bibitem{deb:moea}
+K., D.: Multiobjective Optimization using Evolutionary Algorithms, vol.~16.
+\newblock John Wiley and Sons (2001)
+
+\bibitem{deb:nsga}
+K., D., S., A., A., P., T., M.: A fast elitist non-dominated sorting genetic
+  algorithm for multi-objective optimization: Nsga-ii.
+\newblock In: S.M. et~al (ed.) PPSN VI Proceedings of the 6th International
+  Conference on Parallel Problem Solving from Nature, \emph{Lecture Notes in
+  Computer Science}, vol. 1917, pp. 849--858. Springer, Berlin, Heidelberg
+  (2000).
+\newblock \doi{10.1007/3-540-45356-3\_83}
+
+\bibitem{kobayashi:2016}
+K., K., R., N., Y., Y., K., F.: Experimental analyses of the evacuation
+  planning model using lexicographically quickest flow [in japanese].
+\newblock Transactions of the Operations Research Society of Japan \textbf{59},
+  86--105 (2016).
+\newblock \doi{10.15807/torsj.59.86}
+
+\bibitem{Kawakubo2014a}
+Kawakubo, S., Izumi, K., Yoshimura, S.: Analysis of an option market dynamics
+  based on a heterogeneous agent model.
+\newblock Int. J. Intell. Syst. Acc. Fin. Mgmt. \textbf{21},
+  105^^e2^^80^^93--128 (2014).
+\newblock \doi{10.1002/isaf.1353}
+
+\bibitem{Noda2018b}
+Matsushima, H., Noda, I.: Analysis of trade-off in evacuation plan using
+  evolutionarily exhaustive simulation.
+\newblock In: Proc. of the 23rd International Symposium on Artificial Life and
+  Robotics (AROB 23rd 2018), pp. OS15--4. International Society of Artificial
+  Life and Robotics (2018)
+
+\bibitem{Mizuta2013a}
+Mizuta, T., Izumi, K., Yagi, I., Yoshimura, S.: Design of financial market
+  regulations against large price fluctuations using by artificial market
+  simulations.
+\newblock Journal of Mathematical Finance \textbf{3}(2A), 15--22 (2013).
+\newblock \doi{10.4236/jmf.2013.32A003}
+
+\bibitem{Noda2010y}
+Nurdin, Y., Yuliana, D.K., Noda, I., Soeda, S., Yamashita, T.: Disaster
+  evacuation simulation with multi-agent system approach using netmas for
+  contingency planning (meulaboh case study).
+\newblock In: Proc. of 5th Annual International Workshop \& Expo on Sumatra
+  Tsunami Disaster \& Recovery 2010, p. ??? AIWEST-2010 (2010)
+
+\bibitem{osogami2013ibm}
+Osogami, T., Imamichi, T., Mizuta, H., Morimura, T., Raymond, R., Suzumura, T.,
+  Takahashi, R., Ide, T.: Ibm mega traffic simulator.
+\newblock IBM Research and Development Journal  (2013)
+
+\bibitem{Osogami2013b}
+Osogami, T., Mizuta, H., Ide, T.: Identifying the optimal road closure with
+  simulation.
+\newblock In: Proceedings of the 20th ITS World Congress Tokyo 2013 (2013)
+
+\bibitem{yamashita:2014a}
+T., Y., S., S., M., O., I., N.: Development and application of high-speed
+  evacuation simulator with one-dimensional pedestrian model.
+\newblock Jpournal of Information Processing Society Japan \textbf{53}(7),
+  1732--1744 (2012)
+
+\bibitem{yamashita:2013}
+T., Y., T., O., I., N.: Implementation of simulation environment for exhaustive
+  analysis of huge-scale pedestrian flow.
+\newblock SICE JCMSI \textbf{6}(2), 137--146 (2013)
+
+\bibitem{murase:2014}
+Y., M., T., U., N., I.: A tool for parameter-space explorations.
+\newblock Phyisics Procedia \textbf{59}, 73--76 (2014).
+\newblock \doi{10.1016/j.phpro.2014.08.134}
+
+\bibitem{Yamashita2014}
+Yamashita, T., Matsushima, H., Noda, I.: Exhaustive analysis with a pedestrian
+  simulation environment for assistant of evacuation planning.
+\newblock In: Prof. of PED 2014, pp. SE05--3 (2014).
+\newblock \doi{https://doi.org/10.1016/j.trpro.2014.09.047}
+
+\bibitem{Noda2009x}
+Yamashita, T., Soeda, S., Noda, I.: Evacuation planning assist system with
+  network model-based pedestrian simulator.
+\newblock In: J.J. Yang, M.~Yokoo, Z.J. Takayuki~Ito, P.~Scerri (eds.)
+  Principles of Practice in Multi-Agent Systems (Proc. of 12th International
+  Conference, PRIMA 2009), pp. 649--656. Springer, Heidelberg (2009)
+
+\bibitem{Noda2010p}
+Yamashita, T., Soeda, S., Noda, I.: Assistance of evacuation planning with
+  high-speed network model-based pedestrian simulator.
+\newblock In: Proceedings of Fifth International Conference on Pedestrian and
+  Evacuation Dynamics (PED 2010), p.~58. PED 2010 (2010)
+
+\end{thebibliography}
