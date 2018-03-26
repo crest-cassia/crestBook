@@ -17,6 +17,12 @@ Charles, P., Grothoff, C., Saraswat, V., Donawa, C., Kielstra, A., Ebcioglu,
 \newblock \doi{10.1145/1094811.1094852}.
 \newblock \urlprefix\url{http://doi.acm.org/10.1145/1094811.1094852}
 
+\bibitem{arob17plham}
+Fujishima, D., Kamada, T., Torii, T., Izumi, K.: Overlapping communication and
+  computation for large-scale artificial market simulation.
+\newblock In: Proc. of 22nd International Symposium on Artificial Life and
+  Robotics (AROB 2017), pp. 708--713. Beppu, Japan (2017)
+
 \bibitem{deb:moea}
 K., D.: Multiobjective Optimization using Evolutionary Algorithms, vol.~16.
 \newblock John Wiley and Sons (2001)
@@ -88,6 +94,11 @@ Osogami, T., Mizuta, H., Ide, T.: Identifying the optimal road closure with
   simulation.
 \newblock In: Proceedings of the 20th ITS World Congress Tokyo 2013 (2013)
 
+\bibitem{x10}
+Saraswat, V., Bloom, B., Peshansky, I., Tardieu, O., Grove, D.: X10 Language
+  Specification Version 2.6.1 (2017).
+\newblock \urlprefix\url{http://x10-lang.org/}
+
 \bibitem{yamashita:2014a}
 T., Y., S., S., M., O., I., N.: Development and application of high-speed
   evacuation simulator with one-dimensional pedestrian model.
@@ -120,10 +131,22 @@ Takeuchi, M., Mizuta, H.: X10: Performance and productivity at scale.
 \newblock In: Poster presentation at 20th Workshop on Programming and
   Programming Languages (2018)
 
+\bibitem{toriiPlham}
+Torii, T., Kamada, T., Izumi, K., Yamada, K.: Platform design for large-scale
+  artificial market simulation and preliminary evaluation on the k computer.
+\newblock Artificial Life and Robotics \textbf{22}(3), 301--307 (2017).
+\newblock \doi{10.1007/s10015-017-0368-z}
+
 \bibitem{murase:2014}
 Y., M., T., U., N., I.: A tool for parameter-space explorations.
 \newblock Phyisics Procedia \textbf{59}, 73--76 (2014).
 \newblock \doi{10.1016/j.phpro.2014.08.134}
+
+\bibitem{glb2m}
+Yamashita, K., Kamada, T.: Introducing a multithread and multistage mechanism
+  for the global load balancing library of x10.
+\newblock Journal of Information Processing \textbf{24}(2), 416--424 (2016).
+\newblock \doi{10.2197/ipsjjip.24.416}
 
 \bibitem{Yamashita2014}
 Yamashita, T., Matsushima, H., Noda, I.: Exhaustive analysis with a pedestrian

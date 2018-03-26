@@ -5,6 +5,7 @@
 ##--------------------------------------------------
 TARGET= main
 SUBSOURCE = kamada.bib  main.bib  matsushima.bib  mizuta-crest.bib\
+	izumi.bib\
 	cassia.tex          secMassPara.tex  secRoadMap.tex  ssecTraffic.tex\
 	secMassPlan.tex  ssecMarket.tex  ssecX10Plham.tex\
 	secApplication.tex  secOverview.tex  ssecPedest.tex  ssecXasdi.tex
