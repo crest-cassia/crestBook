@@ -3,13 +3,13 @@
 \label{ss:XASDI}
 %% - - - - - - - - - - - - - - - - - - - - - - - - -
 
-In this section, we describe the overview of X10-based Agent Simulation on Distributed Infrastructure (XASDI)~\cite{xasdi}.
-This framework is published as an open source software under the Eclipse Public License (EPL)
+In this section, we describe the overview of X10-based Agent Simulation on Distributed Infrastructure (XASDI).
+This framework is published as an open source software (\url{https://github.com/x10-lang/xasdi}) under the Eclipse Public License (EPL)
 
 XASDI is large-scale agent-based social simulation framework with enormous number (billions) of agents to represent citizens in cities or countries.
 XASDI enables distributed simulation with the X10 language for post-Peta Scale machines.
-The X10 programming language~\cite{x10} is the APGAS (Asynchronous, Partitioned Global Address Space) language that provides highly parallel and distributed functionalities with Java-like syntax.
-On the other hand, XASDI provides easy-to-use API with Java that is familiar to application programmer of social simulations and can be developed with powerful IDE functionalities (e.g. Eclipse refactoring and debugger).
+The X10 programming language (\url{http://x10-lang.org/}) is the APGAS (Asynchronous, Partitioned Global Address Space) language that provides highly parallel and distributed functionalities with Java-like syntax~\cite{Charles:2005:XOA:1094811.1094852}. X10 application can be compiled and executed on Java environment~\cite{Takeuchi:2011:CXJ:2212736.2212739,Takeuchi:2013:JIM:2481268.2481278}
+With this feature, XASDI provides easy-to-use API with Java that is familiar to application programmer of social simulations and can be developed with powerful IDE functionalities (e.g. Eclipse refactoring and debugger).
 
 XASDI software stack contains core runtime written in X10 language for distributed agent and execution management and Java API bridge to enable application programmer to utilize familiar Java languages (Figure~\ref{fig:Figs.mizuta/xasdistack}).
 By utilizing XASDI framework users can easily develop their social simulator with Java on distributed parallel environment without studying the new X10 language.
@@ -69,17 +69,12 @@ An individual message is a standard message from one agent to another.
 A broadcast message is sent to all nodes and received by the Region or agents corresponding to the type of message.
 A move message is a control message for X10 core runtime to remove the Citizen at the source node and restore it at the destination node with serialized field data stored in the message.
 
-MySample application bundled with XASDI demonstrates simple message transactions.
-SampleLauncher prepares the simulation by generating a SampleRegion and a SampleDriver.
-The SampleDriver generate SampleCitizens at first and executes various type of message transactions by using methods of SampleCitizenProxy or SampleRegion at each time step.
-When SampleCitizen receives a message, it records the type and attribute of the message with the logging mechanism provided from the World.
 
-XASDI Development Guide provides a step-by-step description of developing the sample application and debugging it with Eclipse.
-
-Fig.~\ref{fig:Figs.mizuta/xasdiscaling} shows the weak scaling performance of XASDI by using our application for shopping mall simulation with purchasing and walking behavior.
+As applications for large-scale simulation on XASDI, we developped a large-scale traffic simulator for city~\cite{osogami2013toward} and a shopping mall simulator with integrated model of walking and purchasing behavior~\cite{mizuta2017wsc}.
+Fig.~\ref{fig:Figs.mizuta/xasdiscaling} shows the weak scaling performance of XASDI by using our application for shopping mall simulation with distributed consumer agents~\cite{ppl2018takeuchi}.
 \begin{figure}[h]
   \centering
-  \includegraphics[width=8cm]{Figs.mizuta/xasdiscaling.png}
+  \includegraphics[width=8cm]{Figs.mizuta/xasdiscaling.pdf}
   \caption{Weal scaling performance of XASDI with shopping mall application.}
   \label{fig:Figs.mizuta/xasdiscaling}
 \end{figure}
