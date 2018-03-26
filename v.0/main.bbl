@@ -7,6 +7,16 @@
   \providecommand{\doi}{DOI~\discretionary{}{}{}\begingroup
   \urlstyle{rm}\Url}\fi
 
+\bibitem{Charles:2005:XOA:1094811.1094852}
+Charles, P., Grothoff, C., Saraswat, V., Donawa, C., Kielstra, A., Ebcioglu,
+  K., von Praun, C., Sarkar, V.: X10: An object-oriented approach to
+  non-uniform cluster computing.
+\newblock In: Proceedings of the 20th Annual ACM SIGPLAN Conference on
+  Object-oriented Programming, Systems, Languages, and Applications, OOPSLA
+  '05, pp. 519--538. ACM, New York, NY, USA (2005).
+\newblock \doi{10.1145/1094811.1094852}.
+\newblock \urlprefix\url{http://doi.acm.org/10.1145/1094811.1094852}
+
 \bibitem{deb:moea}
 K., D.: Multiobjective Optimization using Evolutionary Algorithms, vol.~16.
 \newblock John Wiley and Sons (2001)
@@ -41,6 +51,14 @@ Matsushima, H., Noda, I.: Analysis of trade-off in evacuation plan using
   Robotics (AROB 23rd 2018), pp. OS15--4. International Society of Artificial
   Life and Robotics (2018)
 
+\bibitem{mizuta2017wsc}
+Mizuta, H.: Large-scale distributed agent-based simulation for shopping mall
+  and performance improvement with shadow agent projection.
+\newblock In: W.K.V. Chan, A.~D'Ambrogio, G.~Zacharewicz, N.~Mustafee,
+  G.~Wainer, E.~Page (eds.) Proceedings of the 2017 Winter Simulation
+  Conference, pp. 3925--3936. Institute of Electrical and Electronics
+  Engineers, Inc., Piscataway, New Jersey (2017)
+
 \bibitem{Mizuta2013a}
 Mizuta, T., Izumi, K., Yagi, I., Yoshimura, S.: Design of financial market
   regulations against large price fluctuations using by artificial market
@@ -60,6 +78,11 @@ Osogami, T., Imamichi, T., Mizuta, H., Morimura, T., Raymond, R., Suzumura, T.,
   Takahashi, R., Ide, T.: Ibm mega traffic simulator.
 \newblock IBM Research and Development Journal  (2013)
 
+\bibitem{osogami2013toward}
+Osogami, T., Imamichi, T., Mizuta, H., Suzumura, T., Ide, T.: Toward simulating
+  entire cities with behavioral models of traffic.
+\newblock IBM Journal of Research and Development \textbf{57}(5), 6--1 (2013)
+
 \bibitem{Osogami2013b}
 Osogami, T., Mizuta, H., Ide, T.: Identifying the optimal road closure with
   simulation.
@@ -75,6 +98,27 @@ T., Y., S., S., M., O., I., N.: Development and application of high-speed
 T., Y., T., O., I., N.: Implementation of simulation environment for exhaustive
   analysis of huge-scale pedestrian flow.
 \newblock SICE JCMSI \textbf{6}(2), 137--146 (2013)
+
+\bibitem{Takeuchi:2013:JIM:2481268.2481278}
+Takeuchi, M., Cunningham, D., Grove, D., Saraswat, V.: Java interoperability in
+  managed x10.
+\newblock In: Proceedings of the Third ACM SIGPLAN X10 Workshop, X10 '13, pp.
+  39--46. ACM, New York, NY, USA (2013).
+\newblock \doi{10.1145/2481268.2481278}.
+\newblock \urlprefix\url{http://doi.acm.org/10.1145/2481268.2481278}
+
+\bibitem{Takeuchi:2011:CXJ:2212736.2212739}
+Takeuchi, M., Makino, Y., Kawachiya, K., Horii, H., Suzumura, T., Suganuma, T.,
+  Onodera, T.: Compiling x10 to java.
+\newblock In: Proceedings of the 2011 ACM SIGPLAN X10 Workshop, X10 '11, pp.
+  3:1--3:10. ACM, New York, NY, USA (2011).
+\newblock \doi{10.1145/2212736.2212739}.
+\newblock \urlprefix\url{http://doi.acm.org/10.1145/2212736.2212739}
+
+\bibitem{ppl2018takeuchi}
+Takeuchi, M., Mizuta, H.: X10: Performance and productivity at scale.
+\newblock In: Poster presentation at 20th Workshop on Programming and
+  Programming Languages (2018)
 
 \bibitem{murase:2014}
 Y., M., T., U., N., I.: A tool for parameter-space explorations.
