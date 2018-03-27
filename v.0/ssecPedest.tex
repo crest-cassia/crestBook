@@ -19,23 +19,24 @@ computing like K-computers.
 \subsubsection{Pedestrian simulator: CrowdWalk}
 \label{sss:CrowdWalk}
 %% - - - - - - - - - - - - - - -
-In order to simulate evacuation, we employ simulator CrowdWalk
+In order to simulate evacuation situations, we employ CrowdWalk
 \cite{yamashita:2013,yamashita:2014a}.
 CrowdWalk is a pedestrian simulator that limits human movement 
 to one-dimensional movement on the road network. 
-Road network is composed of nodes and links, and CrowdWalk controls 
-large number of pedestrian movements on wide area at high speed.
+Road network is composed of nodes and links,
+on which CrowdWalk controls 
+large number of pedestrian movements at high speed.
 
 We use a road map of Nishiyodogawa-ku,
-which consists of 7,624 nodes (crossings) and 10,707 road links
+which consists of 7,624 nodes (intersections) and 10,707 road links
 (\figref{fig:Figs.noda/figure-08.nishiyodogawa.eps}).
-The local government select 86 official refuges for this area.
-We suppose that the population of this area is 54,909
-who are distributed in 146 small zones in the area.
-We also suppose that all people in a zone follows an evacuation rule
-that asks people to go to a certain destination with one via point in a map.
-The destination and the via point is selected from the 86 official refuges
-and from 533 candidates for via points, respectively.
+This area has 86 official refuges
+and 54,909 of the population,
+which are distributed in 146 small zones.
+We suppose that every people in each zone follows one guidance rule
+that requests them to go to a certain destination with one via point in a map.
+The destination and the via point are selected from the 86 official refuges
+and from 533 major intersections, respectively.
 
 %%++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 \begin{figure}
@@ -53,30 +54,28 @@ and from 533 candidates for via points, respectively.
 \label{sss:moea}
 %% - - - - - - - - - - - - - - -
 
-As described before, evacuation planning is a dilemma
-between evacuation time and simple-ness of evacuation rule.
+in general, evacuation planning includes a dilemma
+between evacuation time and simple-ness of evacuation guidance.
 From the viewpoint of the minimization of evacuation time,
 it is better to use the result of mathematical optimization
 like maximum network-flow \cite{kobayashi:2016}.
 However, we need to guide large number of people that include
-ones who are not acquainted with the place like visitors.
+persons who are not acquainted with the place like visitors.
 So, the guidance should be simple enough to understand and to follow easily.
 
 
 In order to know the relationship of these two objectives,
 we apply NSGA-II(Elitist Non-Dominated Sorting Genetic Algorithm)
 \cite{deb:nsga}, a genetic algorithm for
-multiple objective optimization\cite{deb:moea}.
+multiple objective optimization.
 
 For the first objection function, the evacuation time,
 is estimated by simulation using CrowdWalk for each guidance plan.
 
-For the second objective function, the simple-ness of evacuation plans,
+For the second objective function, the simple-ness of evacuation guidance,
 we introduce `entropy' of the plan as follows.
-The basic concept of the entropy
-is illustrated in \figref{fig:Figs.noda/figure-09.evac_rule.eps}.
-Suppose two connecting zones, $z_i$ and $z_j$ in the area, and
-populations of the zones are $n_i$ and $n_j$, respectively.
+Suppose two connecting zones, $z_i$ and $z_j$ in the area,
+whose populations are $n_i$ and $n_j$, respectively.
 If the two rules for these zones has same via point and destination,
 then the entropy is zero.
 Otherwise, 
@@ -88,26 +87,26 @@ the entropy of this pair is defined by:
                   \nonumber
 \end{eqnarray}
 Finally, we use total entropy $H = \sum_{z_i,z_j} H(z_i, z_j)$
-for the index of the complexity of the guidance (negative value
+for the index of the complexity of the guidance (opposite value
 of the simple-ness).
 
 
-%%++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-\begin{figure}
-  \centering
-  \includegraphics[width=.5\linewidth]{Figs.noda/figure-09.evac_rule.eps}
-  \caption{Rule Entropy}
-  \label{fig:Figs.noda/figure-09.evac_rule.eps}
-\end{figure}
-%%++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+% %%++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+% \begin{figure}
+%   \centering
+%   \includegraphics[width=.5\linewidth]{Figs.noda/figure-09.evac_rule.eps}
+%   \caption{Rule Entropy}
+%   \label{fig:Figs.noda/figure-09.evac_rule.eps}
+% \end{figure}
+% %%++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 %%------------------------------
-\subsubsection{Experimental Result and Discussion}
+\subsubsection{Experimental and Discussion}
 \label{sss:nsga-experiment}
 %% - - - - - - - - - - - - - - -
 
-In order to run NSGA-II for this evacuation plan,
-we utilized OACIS\cite{murase:2014} to manage the large number of runs.
+In order to run NSGA-II for this guidance plan,
+we utilized OACIS described in \secref{ss:OACIS} to manage the large number of runs.
 The search space of this problem is so huge
 ($R^{73} \times 533^{146} \times 86^{146}$)
 and NSGA-II requires large number of populations (about 100--1,000).
@@ -115,11 +114,12 @@ So we need to run so many runs for the optimization.
 In the experiment, we runs 500 generations with 100 population
 for the optimization,
 which means we run 500,000 simulations
-\footnote{We runs 10 simulations for one evacuation plan
+\footnote{We runs 10 simulations for one guidance plan
   to calculate average evacuation time.}
 for this experiment.
 
-To control NSGA-II procedure, we utilize the ruby plug-in facility of OACIS.
+To control 
+We implemented NSGA-II procedure using Ruby API of OACIS.
 In the actual GA procedure, we use `simulated binary crossover' and
 `polynomial mutation' for creating new generations,
 and Paleto ranking mechanism to determine the selection.
@@ -145,29 +145,36 @@ area of the Paleto front in this graph.
 
 %%++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 \begin{figure}
+  \begin{minipage}[c]{.49\linewidth}  %{width}
   \centering
-  \includegraphics[width=.6\linewidth]{Figs.noda/figure-11.evac_wide.eps}
+  \includegraphics[width=.99\linewidth]{Figs.noda/figure-11.evac_wide.eps}
   \caption{Result of Evacuation Simulation (wide road)}
   \label{fig:Figs.noda/figure-11.evac_wide.eps}
+  \end{minipage}~
+%\end{figure}
+%%++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+%%++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+%\begin{figure}
+  \begin{minipage}[c]{.49\linewidth}  %{width}
+  \centering
+  \includegraphics[width=.99\linewidth]{Figs.noda/figure-10.evac_narrow.eps}
+  \caption{Result of Evacuation Simulation (narrow road)}
+  \label{fig:Figs.noda/figure-10.evac_narrow.eps}
+  \end{minipage}
 \end{figure}
 %%++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
 
 \Figref{fig:Figs.noda/figure-10.evac_narrow.eps} also
 shows the result of the case that the people use only pedestrian road.
 In this case, the boundary of the evacuation time increase to 4500,
 but the complexity of guidance is similar to the previous case.
+Anyway, in both cases of \figref{fig:Figs.noda/figure-11.evac_wide.eps} and
+\ref{fig:Figs.noda/figure-10.evac_narrow.eps},
+we can see a clear trade-off structure of Paleto solution sets.
 
-%%++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-\begin{figure}
-  \centering
-  \includegraphics[width=.6\linewidth]{Figs.noda/figure-10.evac_narrow.eps}
-  \caption{Result of Evacuation Simulation (narrow road)}
-  \label{fig:Figs.noda/figure-10.evac_narrow.eps}
-\end{figure}
-%%++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-
-As shown in this section,
-evolutionary methods using OACIS can be a powerful tool
+This result imply that
+OACIS with evolutionary methods have a great potential
 to investigate such social problems.
 We also succeed to apply CARAVAN to run the same procedure
 on K-computer.

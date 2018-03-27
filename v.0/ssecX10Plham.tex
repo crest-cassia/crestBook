@@ -12,24 +12,24 @@ Using X10 and our parallel middleware, we developed Plham~\cite{toriiPlham,arob1
 a platform for large-scale and high-frequency artificial
 market simulation.
 In this section, we first summarize the design and implementation of Plham to enable 
-large-scale and high-frequency artificial markte simulation.
+large-scale and high-frequency artificial market simulation.
 Then we show two libraries, 
 a distributed collection library and
 a global load balancing library with multi-stage facility~\cite{glb2m}, 
 that are designed for large-scale multi-agent simulations.
 
-Artificial market agent-based simulations have potential to be a strong tool for studying rapid and large market fluctuation and designing Financial regulations.
+Artificial market agent-based simulations have potential to be a strong tool for studying rapid and large market fluctuation and designing financial regulations.
 High-frequency traders, that exchange multiple assets simultaneously within a millisecond,
 is said to be a cause of rapid and large market fluctuation.
 % Plham is designed to allow users to define their simulation models without parallel computing expertise.
 Plham enables modeling financial markets
 composed of various brands of assets and a large number of agents trading on a short timescale.
 The design feature of Plham is the separation
-of artificial market models (simulation models) from their execution (Figure~\ref{fig:Figs.kamada/plham}).
+of artificial market models (simulation models) from their execution (\figref{fig:Figs.kamada/plham}).
 The primary components of a simulation model are 'agents' and 'markets' as shown in (a).
 The term \textit{agent} is used to represent a trader, including high-frequency traders.
 The term \textit{market} is used to represent a system or place where agents can buy or sell a specific asset (here, we assume one market is for one asset).
-Some type of asset depends on a collection of assets and is itself a tradable financial instrument (e.g., index-futures, exchange-traded funds). 
+A certain type of assets depends on a collection of assets and is itself a tradable financial instrument (e.g., index-futures, exchange-traded funds). 
 Users can employ ready-made agent/market classes provided by Plham or define
 their original ones by extending these classes,
 and construct their simulation models without parallel computing expertise.
@@ -45,10 +45,10 @@ and construct their simulation models without parallel computing expertise.
 
 Plham provides multiple runners that implement respective execution models.
 To execute a parallel simulation, the users can employ a parallel runner implementing its parallel execution model that allocates agents over multiple computing nodes,
-changes the scheduling frequency of agents, depending on the class of agents, and accepts delayed propagation of market information depending on the class.
+changes the scheduling frequency of agents depending on the class of agents, and accepts delayed propagation of market information depending on the class.
 In the current implementation, 
 HFT agents are assigned at the master node, in which the order handling of the markets is processed,
-and the computation for ordinal traders is executed at the worker nodes, as shown in Figure~\ref{fig:Figs.kamada/plham}~(b).
+and the computation for ordinal traders is executed at the worker nodes, as shown in \figref{fig:Figs.kamada/plham}~(b).
 For large-scale simulations, nonHFT agents must be forced to make a decision by using delayed or out-of-date market information, whereas HFT agents are given access to latest or relatively up-to-date market information.
 
 The current parallel runner allows concurrent execution of order submission and handling as shown in (c) to reduces CPU idle time at worker nodes and achieve simulation scalability.
@@ -56,7 +56,7 @@ To increase the parallelism of the simulation, the runner introduces three agent
 It then concurrently executes the order-submission stage of long-term traders and the order-handling stage of markets. 
 In addition, it succeeded in overlapping communication and computation.
 The scalability of the current parallel execution model was evaluated in weak-scaling to a maximum of 2048 computing nodes on the K computer~\cite{arob17plham}.
-Plham is available as an open-source software under Eclipse Public License (http://github.com/crest-cassia/oacis).
+Plham is available as an open-source software under Eclipse Public License (http://github.com/crest-cassia/plham).
 
 To realize distributed multi-agent simulation on large scale distributed computers,
 developers have to implement proper agent distribution, data transportation for agent communication, parallel execution of agent computation using multi-core CPUs, and efficient scheduling of respective components of computation and communication.
@@ -75,7 +75,7 @@ and the elapsed time for the communication can be reduced.
 These classes also offers an asynchronous method,
 \texttt{asyncEach},
 that receive a function and apply it to all the local elements in the called node using thread pools.
-Using these features, the overlapping of communication and computation in Plham was briefly described as shown in Figure~\ref{fig:Figs.kamada/middleware}~(a).
+Using these features, the overlapping of communication and computation in Plham was briefly described as shown in \figref{fig:Figs.kamada/middleware}~(a).
 
 %%++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 \begin{figure}
@@ -124,11 +124,11 @@ GLB features a lifeline-based scalable work-stealing algorithm.
 Results of completed tasks are gathered by means of reduction operations.
 We introduced a multithread design into GLB 
 to allow efficient data sharing between CPU cores.
-The multithread version showed high scalability than the original one (Figure~\ref{fig:Figs.kamada/middleware}~(b)).
+The multithread version showed high scalability than the original one (\figref{fig:Figs.kamada/middleware}~(b)).
 In addition, we proposed a multistage mechanism for GLB to 
 assign execution stages to tasks.
 The system gives high priority to tasks that are assigned to earlier stages
-and then proceeds with subsequent stage tasks (Figure~\ref{fig:Figs.kamada/middleware}~(c)).
+and then proceeds with subsequent stage tasks (\figref{fig:Figs.kamada/middleware}~(c)).
 When a computing node runs out of tasks at the earliest stage,
 it requests tasks at the earliest stage from other nodes
 and awaits responses by processing subsequent stage tasks.

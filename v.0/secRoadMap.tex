@@ -3,13 +3,14 @@
 \label{sec:Computational Roadmaps of Social Simulations}
 %% - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
-As described above,
-our purpose is to determine how HPC contributes
+In this project, we also try 
+to determine how HPC contributes
 to the advancement of research on social simulation or
 to clarify the computational power required
 for real applications of social simulation.
 In this section, we focus on three applications and try
-to develop roadmaps for them.
+to develop roadmaps for them
+\cite{Noda2018a}.
 
 In the development of these roadmaps, 
 we adopted two indexes to measure the computational cost,
@@ -37,37 +38,19 @@ The main target of evacuation simulation is not
 to find an optimal plan of evacuation for a given disaster situation,
 but to evaluate the feasibility and robustness of executable candidates
 of evacuation plans or guidance policies.
-Because of natures of disasters, it is difficult to acquire complete information
-to determine the conditions of evacuations in the event of a disaster.
-Therefore, it is almost impossible to validate optimality for
-each disaster.
-Instead, local governments should strive to establish feasible plans
-that will work robustly in most situations of disasters.
-This means evaluation of evacuation plans should be done
-under widely varying disaster scenarios.
-A massively parallel computer simulation 
-will make such evaluations easy and effective.
 
 Several simulations have been performed for 
 evaluating such evacuation plans
 \cite{Noda2009x}\cite{Noda2010p}\cite{Noda2010y}\cite{Yamashita2014}.
 For example, a simulation of an evacuation from
-a Tsunami struck city in Tokai area in Japan was performed, where
-a massive damage is expected to occur due to the great Tokai-Tonankai earthquake.
-To help understand the importance of the relationship between
-evacuation scale (populations of evacuees) and effectiveness of evacuation
-plans, we conducted the following exhaustive simulations considering various sizes and evacuation
+a Tsunami struck city in Tokai area in Japan was performed.
+We conducted the following exhaustive simulations considering various sizes and evacuation
 policies (evacuee's origin-destination (OD) plans).
-The simulation results indicate that
+The simulation results tell that
 the scale of evacuation can be grouped into two categories, namely,
 ``large'' ($>$ 3,000 evacuees) and
-``small'' ($<$ 3,000 evacuees). 
-Each evacuation plan has similar relative
-effectiveness in each category.
-The actual evacuation size (population) may change based on various factors
-such as daytime/nighttime, number of visitors/travelers, weather, and
-special events.
-This implies that citizens and local governments should consider at least 
+``small'' ($<$ 3,000 evacuees),
+and that citizens and local governments should consider at least 
 two plans for large- and small-scale evacuations.
 
 We execute the evacuation simulation described above to arrive at
@@ -113,7 +96,7 @@ simulations.
 %%----------------------------------------------------------------------
 \begin{figure}
   \centering
-  \includegraphics[width=.98\linewidth]{Figs.noda/figure2-4.eps}
+  \includegraphics[width=.60\linewidth]{Figs.noda/figure2-4.eps}
   \caption{Roadmap of Evacuation Simulation}
   \label{fig:Figure-4}
 \end{figure}
@@ -122,24 +105,6 @@ simulations.
 %%--------------------------------------------------
 \subsection{Traffic Simulation}
 %% - - - - - - - - - - - - - - - - - - - - - - - - -
-Road traffic is an important domain from the viewpoint of
-applying social simulation.
-Traffic simulation has been extensively researched over a long period,
-and recently,
-the focus has been on multiagent simulation,
-in which each agent behaves according to its own
-preferences and inference rules.
-Big data advances in computational power
-enable us to perform such detailed simulations.
-
-\cite{osogami2013ibm} have been developing a traffic simulator called IBM Mega Traffic Simulator that can run large scale traffic simulations
-on XASDI middleware.
-The main feature of this simulator is its ability to reflect 
-individual drivers' preferences.
-Using this feature,
-according to big-data,
-we can adapt parameters in the simulation
-that cause differences in drivers' tendency.
 
 To create a reference point for the roadmap of the traffic
 simulation,
@@ -181,7 +146,7 @@ in \figref{fig:Figure-5}, and they require exa-scale computational power.
 %%----------------------------------------------------------------------
 \begin{figure}
   \centering
-  \includegraphics[width=.98\linewidth]{Figs.noda/figure2-5.eps}
+  \includegraphics[width=.60\linewidth]{Figs.noda/figure2-5.eps}
   \caption{Roadmap of Traffic Simulation}
   \label{fig:Figure-5}
 \end{figure}
@@ -247,7 +212,7 @@ computational cost of a naive simulation exceeds exa-scale HPC.
 %%----------------------------------------------------------------------
 \begin{figure}
   \centering
-  \includegraphics[width=.98\linewidth]{Figs.noda/figure2-6.eps}
+  \includegraphics[width=.60\linewidth]{Figs.noda/figure2-6.eps}
   \caption{Roadmap of Market Simulation}
   \label{fig:Figure-6}
 \end{figure}
@@ -259,7 +224,7 @@ computational cost of a naive simulation exceeds exa-scale HPC.
 % %%----------------------------------------------------------------------
 % \begin{figure}
 %   \centering
-%   \includegraphics[width=.90\linewidth]{Figs.noda/Figure-8.eps}
+%   \includegraphics[width=.60\linewidth]{Figs.noda/Figure-8.eps}
 %   \caption{Roadmap of Transportation Service Simulation}
 %   \label{fig:Figure-8}
 % \end{figure}
@@ -269,7 +234,7 @@ computational cost of a naive simulation exceeds exa-scale HPC.
 %\cite{Noda2013l}
 
 %%--------------------------------------------------
-\subsection{Future Issues}
+\section{Toward Smart Society}
 %% - - - - - - - - - - - - - - - - - - - - - - - - -
 
 In the roadmaps, we count the number of scenarios naively,
@@ -289,9 +254,9 @@ realize more intelligent and adaptive behaviors like human.
 This is still open issues. 
 
 The multiagent social simulation
-is evolving research domain and still under-establishing phase.
-However, requests from application fields become stronger and
-stronger.
+is evolving research domain to realize smart societies by IT and AI,
+and is still under-establishing phase.
+However, requests from application fields become stronger and wider.
 So, it is important to determine a measure to know achievements will
 be important.  
 The roadmaps shown in this article will beocme a testbed to provide

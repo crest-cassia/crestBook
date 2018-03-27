@@ -6,7 +6,7 @@
 We developed the platform software Plham (Platform for Large-scale and
 High-frequency Artificial Market), which can simulate financial
 markets with thousands of stocks and hundreds of thousands of market
-participants\ref{ToriiIzumiYamada2017}.  By joint research with Tokyo
+participants\cite{ToriiIzumiYamada2017}.  By joint research with Tokyo
 Stock Exchange, the market simulation result using Plham supported a
 new rule determination in the actual financial market.  Simulation
 execution and management utilized the execution control system OACIS
@@ -16,12 +16,14 @@ analysis/visualization application acquired by simulation execution
 was fed back to the OACIS development team.  The result shown below
 was obtained about the market simulation.
 
-\paragraph{Policy-making support of tick size reduction of Tokyo Stock Exchange}
+%%------------------------------
+\subsubsection{Policy-making support of tick size reduction of Tokyo Stock Exchange}
+%% - - - - - - - - - - - - - - -
 
 About 100 kinds of parameter study were performed using the prototype
-program of the small-scale financial market simulation in which 1000
+program of the small-scale financial market simulation in which 1,000
 trading agents trade one kind of stocks
-(Fig. \ref{fig:Figs.izumi/ticksize.eps})\ref{Mizuta2013a,doi:10.1002/isaf.1374,MizutaKosugiKusumotoMatsumotoIzumi2015}.
+(\figref{fig:Figs.izumi/ticksize.eps})\cite{Mizuta2013a,doi:10.1002/isaf.1374,MizutaKosugiKusumotoMatsumotoIzumi2015}.
 As compared with a simulation result and the actual data of Tokyo
 Stock Exchange, the threshold of proper tick size (the minimum price
 unit) was calculated from the fluctuation of a stock price.  This
@@ -39,18 +41,21 @@ reduces a computational complexity was developed.
   \label{fig:Figs.izumi/ticksize.eps}
 \end{figure}
 
-\paragraph{Simulation of Flash Crash}
+%%------------------------------
+\subsubsection{Simulation of Flash Crash}
+%% - - - - - - - - - - - - - - -
 
 The prototype model was extended using the parallel processing
 language X10 to the larger-scale simulation which consists of 100
 individual stocks and one index securities coupled to a stock price
-average\ref{ToriiIzumiYamada2016}.  We investigated the conditions to
+average\cite{ToriiIzumiYamada2016}.  We investigated the conditions to
 which the high-frequency arbitrage trading propagates a rapid price
 change to other stocks using this model.  About 5000 kinds of
 parameter sets were analyzed using social simulation management module
 OACIS, and the combination of the trading strategies which a price
 decline propagates to other stocks and the flash crash may occur was
-specified (Fig. \ref{fig:Figs.izumi/hft.eps} We introduced the circuit
+specified (\figref{fig:Figs.izumi/hft.eps}).
+We introduced the circuit
 breaker into the model as a financial regulation which prevents such
 fluctuation propagation and investigated the conditions where a
 circuit breaker prevents propagation effectively, and the conditions
@@ -64,16 +69,19 @@ where it accelerated the propagation.
 \end{figure}
 
 
-\paragraph{Analysis of the influence of risk management regulation}
+%%------------------------------
+\subsubsection{Analysis of the influence of risk management regulation}
+%% - - - - - - - - - - - - - - -
 
-By joint research with a financial institution, we developed the
+
+By the joint research with a financial institution, we developed the
 support method of the institutional design financial regulation such
-as capital adequacy requirements\ref{YonenoIzumi2018}.  As a result,
+as capital adequacy requirements\cite{YonenoIzumi2018}.  As a result,
 the market became unstable when the market participants who manage a
 market risk based on capital adequacy requirements increased in number
-(Fig. \ref{fig:Figs.izumi/var1.eps}).  An increase of the kind of
+\figref{fig:Figs.izumi/var1.eps}).  An increase of the kind of
 securities in which it trades showed that the instability by
-regulation was eased (Fig. D).
+regulation was eased (\figref{fig:Figs.izumi/var2.eps}).
 
 \begin{figure}[htb]
   \centering

@@ -8,10 +8,11 @@ This framework is published as an open source software (\url{https://github.com/
 
 XASDI is large-scale agent-based social simulation framework with enormous number (billions) of agents to represent citizens in cities or countries.
 XASDI enables distributed simulation with the X10 language for post-Peta Scale machines.
-The X10 programming language (\url{http://x10-lang.org/}) is the APGAS (Asynchronous, Partitioned Global Address Space) language that provides highly parallel and distributed functionalities with Java-like syntax~\cite{Charles:2005:XOA:1094811.1094852}. X10 application can be compiled and executed on Java environment~\cite{Takeuchi:2011:CXJ:2212736.2212739,Takeuchi:2013:JIM:2481268.2481278}
+The X10 programming language (\url{http://x10-lang.org/}) is the APGAS (Asynchronous, Partitioned Global Address Space) language that provides highly parallel and distributed functionalities with Java-like syntax~\cite{Charles:2005:XOA:1094811.1094852}. X10 application can be compiled and executed on Java environment~\cite{Takeuchi:2011:CXJ:2212736.2212739,Takeuchi:2013:JIM:2481268.2481278}.
 With this feature, XASDI provides easy-to-use API with Java that is familiar to application programmer of social simulations and can be developed with powerful IDE functionalities (e.g. Eclipse refactoring and debugger).
 
-XASDI software stack contains core runtime written in X10 language for distributed agent and execution management and Java API bridge to enable application programmer to utilize familiar Java languages (Figure~\ref{fig:Figs.mizuta/xasdistack}).
+XASDI software stack contains core runtime written in X10 language for distributed agent and execution management and Java API bridge to enable application programmer to utilize familiar Java languages
+(\figref{fig:Figs.mizuta/xasdistack}).
 By utilizing XASDI framework users can easily develop their social simulator with Java on distributed parallel environment without studying the new X10 language.
 
 \begin{figure}[h]
@@ -23,7 +24,7 @@ By utilizing XASDI framework users can easily develop their social simulator wit
 
 
 The agent in XASDI is referred to as Citizen and Citizen has corresponding CitizenProxy that is managed in the simulation environment to exchange messages.
-To manage CitizenProxy, XASDI provides a hierarchical container structure called Place, Region and World (see Figure~\ref{fig:Figs.mizuta/xasdiclass}. CitizenProxies belong to a Place and Places belong to a Region. World can contain several Regions, but usually there is only one Region in the World.
+To manage CitizenProxy, XASDI provides a hierarchical container structure called Place, Region and World (see \figref{fig:Figs.mizuta/xasdiclass}). CitizenProxies belong to a Place and Places belong to a Region. World can contain several Regions, but usually there is only one Region in the World.
 
 
 Here, we need to note that the confusing terminology of the X10 programming language and the framework.
@@ -64,14 +65,14 @@ The method of the Driver looks at the time and phase given by the environment an
 
 In one node, there is one Region instance that manages the execution of the simulator.
 The core framework written using X10 manages the Regions and Message Repositories of distributed nodes.
-The Message Repository supports several kinds of messages such as individual message, broadcast message, and control message to move agent between X10 Places.
+The Message Repository supports several kinds of messages such as individual message, broadcast message, and control message to move agents between X10 Places.
 An individual message is a standard message from one agent to another.
 A broadcast message is sent to all nodes and received by the Region or agents corresponding to the type of message.
 A move message is a control message for X10 core runtime to remove the Citizen at the source node and restore it at the destination node with serialized field data stored in the message.
 
 
 As applications for large-scale simulation on XASDI, we developped a large-scale traffic simulator for city~\cite{osogami2013toward} and a shopping mall simulator with integrated model of walking and purchasing behavior~\cite{mizuta2017wsc}.
-Fig.~\ref{fig:Figs.mizuta/xasdiscaling} shows the weak scaling performance of XASDI by using our application for shopping mall simulation with distributed consumer agents~\cite{ppl2018takeuchi}.
+\figref{fig:Figs.mizuta/xasdiscaling} shows the weak scaling performance of XASDI by using our application for shopping mall simulation with distributed consumer agents~\cite{ppl2018takeuchi}.
 \begin{figure}[h]
   \centering
   \includegraphics[width=8cm]{Figs.mizuta/xasdiscaling.pdf}

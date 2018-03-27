@@ -3,11 +3,16 @@
 \label{s:MASS Planning Module}
 %% - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
+%%--------------------------------------------------
+\subsection{Caregories of Simulation Class in Computational Cost}
+%% - - - - - - - - - - - - - - - - - - - - - - - - -
+
+
 In this section, we give an overview on the two frameworks for parameter-space exploration, OACIS and CARAVAN.
 Although both of these frameworks are designed in order to conduct parameter-space exploration making full use of HPC resources, they differ in the target scale of each job.
 In one hand, a certain class of research issues requires to use the maximum computing power to solve a single large problem, so called capability computing.
 On the other hand, other researches require to do many small- or medium-scale simulations for parameter-space explorations, i.e., capacity computing.
-We categorized these problems into four classes depending on the scale of a single simulation job as summarized in Table~\ref{tab:problem_scale}.
+We categorized these problems into four classes depending on the scale of a single simulation job as summarized in \tabref{tab:problem_scale}.
 In this Table, it is assumed that the total amount of computation is order of ten exa floating-point operations.
 The left most column, which we call class A, corresponds to typical capability computing. The number of independent jobs is at most $10^2$.
 In class B, a typical single job is an MPI-parallel program using $10^3 \sim 10^5$ CPU cores. The number of jobs amounts to $10^3 \sim 10^5$.
@@ -26,19 +31,28 @@ This is why we developed two frameworks, OACIS and CARAVAN for classes B and C, 
   }
   \label{tab:problem_scale}
   \centering
-  \begin{tabular}{|c|cccc|} \hline
-    class      & A                & B                & C                & D \\ \hline
-    \# of jobs & $10^0 \sim 10^2$ & $10^3 \sim 10^5$ & $10^6 \sim 10^9$ & $10^{10} \sim$ \\
-    \# of operations / job & $10^{19} \sim 10^{17}$ & $10^{16} \sim 10^{14}$ & $10^{13} \sim 10^{10}$ & $10^{9} \sim$ \\
-    FLOPS / job & $10^{18} \sim 10^{16}$ & $10^{15} \sim 10^{13}$ & $10^{12} \sim 10^{9}$ & $10^{8} \sim$ \\
-    \# of cores / job & $10^{8} \sim 10^{6}$ & $10^{5} \sim 10^{3}$ & $10^{2} \sim 10^{-1}$ & $10^{-2} \sim$ \\
-    typical job scale & large-scale MPI & medium scale MPI & SMP or serial & function \\
-    parameter selection & manual & manual or auto & auto & auto \\
-    social simulation application & - & traffic in metropolitan area & traffic in a city & data-driven model \\
-    frameworks & & OACIS & CARAVAN & Map-Reduce \\
+  \begin{tabular}{|c||c|c|c|c|} \hline 
+    class      & A                & B                & C                & D \\ \hline \hline
+    \# of jobs & $10^0 \sim 10^2$ & $10^3 \sim 10^5$ & $10^6 \sim 10^9$ & $10^{10} \sim$ \\ \hline
+    \# of operations / job & $10^{19} \sim 10^{17}$ & $10^{16} \sim 10^{14}$ & $10^{13} \sim 10^{10}$ & $10^{9} \sim$ \\ \hline
+    FLOPS / job & $10^{18} \sim 10^{16}$ & $10^{15} \sim 10^{13}$ & $10^{12} \sim 10^{9}$ & $10^{8} \sim$ \\ \hline
+    \# of cores / job & $10^{8} \sim 10^{6}$ & $10^{5} \sim 10^{3}$ & $10^{2} \sim 10^{-1}$ & $10^{-2} \sim$ \\ \hline
+    typical job scale & large-scale MPI & medium scale MPI & SMP or serial & function \\ \hline
+    parameter selection & manual & manual or auto & auto & auto \\  \hline
+    \multicolumn{1}{|p{.18\linewidth}||}{\hfil \centering social simulation application}
+    & \multicolumn{1}{p{.18\linewidth}|}{\centering -}
+    & \multicolumn{1}{p{.18\linewidth}|}{\centering traffic in metropolitan area}
+    & \multicolumn{1}{p{.18\linewidth}|}{\centering traffic in a city}
+    & \multicolumn{1}{p{.18\linewidth}|}{\centering data-driven model} \\ \hline
+    frameworks & & OACIS & CARAVAN & Map-Reduce \\ 
     \hline
   \end{tabular}
 \end{table}
+
+%%--------------------------------------------------
+\subsection{OACIS}
+\label{ss:OACIS}
+%% - - - - - - - - - - - - - - - - - - - - - - - - -
 
 OACIS, which stands for Organizing Assistant for Comprehensive and Interactive Simulations, is a job management framework for problems in class B\cite{murase_phys_proc}.
 It is available as an open-source software under the MIT license. (http://github.com/crest-cassia/oacis).
@@ -54,7 +68,7 @@ OACIS is designed to let researchers conduct their research in an efficient, rel
   \label{fig:oacis_overview}
 \end{figure}
 
-The system architecture of OACIS is depicted in Fig.~\ref{fig:oacis_overview}.
+The system architecture of OACIS is depicted in \figref{fig:oacis_overview}.
 It is a web application developed based on the Ruby on Rails framework, which provides an interactive user-interface.
 The application server is responsible for handling requests from users. When a user creates a job using a web browser, the record of the job is created in the database.
 Another daemon process, which we denote as ``worker'', periodically checks whether a job is ready to be submitted to a remote host.
@@ -68,10 +82,14 @@ By this design, OACIS can run simulators in various research fields, which may b
 In addition to an interactive user-interface, OACIS provides application programming interfaces (APIs) in Ruby and Python programming languages.
 Any set of operations on OACIS is programmable using the APIs, which can be used for various types of parameter-space explorations including parameter sweeps, sensitivity analysis, and optimization of parameters.
 
+%%--------------------------------------------------
+\subsection{CARAVAN}
+\label{ss:CARAVAN}
+%% - - - - - - - - - - - - - - - - - - - - - - - - -
 CARAVAN is another framework designed for class C jobs.
 It is also available as an open-source software under the MIT license.(https://github.com/crest-cassia/caravan)
 
-Figure~\ref{fig:caravan_overview} shows the whole architecture of CARAVAN. It consists of three parts: search engine, scheduler, and simulator.
+\Figref{fig:caravan_overview} shows the whole architecture of CARAVAN. It consists of three parts: search engine, scheduler, and simulator.
 ``Simulator'' is an executable program prepared for each use case. Once a user integrate a simulator into CARAVAN, it is executed in parallel.
 Since a simulator is executed as an external process, a simulator may be implemented in any language as in OACIS.
 ``Scheduler'' is a part which is responsible for parallelization. It receives the commands to execute simulators from the search engine, distributes them to available nodes, and executes the simulator in parallel.

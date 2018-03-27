@@ -23,10 +23,6 @@ Fujishima, D., Kamada, T., Torii, T., Izumi, K.: Overlapping communication and
 \newblock In: Proc. of 22nd International Symposium on Artificial Life and
   Robotics (AROB 2017), pp. 708--713. Beppu, Japan (2017)
 
-\bibitem{deb:moea}
-K., D.: Multiobjective Optimization using Evolutionary Algorithms, vol.~16.
-\newblock John Wiley and Sons (2001)
-
 \bibitem{deb:nsga}
 K., D., S., A., A., P., T., M.: A fast elitist non-dominated sorting genetic
   algorithm for multi-objective optimization: Nsga-ii.
@@ -72,17 +68,38 @@ Mizuta, T., Izumi, K., Yagi, I., Yoshimura, S.: Design of financial market
 \newblock Journal of Mathematical Finance \textbf{3}(2A), 15--22 (2013).
 \newblock \doi{10.4236/jmf.2013.32A003}
 
+\bibitem{MizutaKosugiKusumotoMatsumotoIzumi2015}
+Mizuta, T., Kosugi, S., Kusumoto, T., Matsumoto, W., Izumi, K.: Effects of dark
+  pools on financial markets' efficiency and price discovery function: an
+  investigation by multi-agent simulations.
+\newblock Evolutionary and Institutional Economics Review \textbf{12}(2),
+  375--394 (2015).
+\newblock \doi{10.1007/s40844-015-0020-3}.
+\newblock \urlprefix\url{https://doi.org/10.1007/s40844-015-0020-3}
+
+\bibitem{doi:10.1002/isaf.1374}
+Mizuta, T., Kosugi, S., Kusumoto, T., Matsumoto, W., Izumi, K., Yagi, I.,
+  Yoshimura, S.: Effects of price regulations and dark pools on financial
+  market stability: An investigation by multiagent simulations.
+\newblock Intelligent Systems in Accounting, Finance and Management
+  \textbf{23}(1-2), 97--120.
+\newblock \doi{10.1002/isaf.1374}.
+\newblock
+  \urlprefix\url{https://onlinelibrary.wiley.com/doi/abs/10.1002/isaf.1374}
+
+\bibitem{Noda2018a}
+Noda, I., Ito, N., Izumi, K., Mizuta, H., Kamada, T., Hattori, H.: Roadmap and
+  research issues of multiagent social simulation using high-performance
+  computing.
+\newblock Journal of Computational Social Science \textbf{1}(Issue 1), 155--166
+  (2018)
+
 \bibitem{Noda2010y}
 Nurdin, Y., Yuliana, D.K., Noda, I., Soeda, S., Yamashita, T.: Disaster
   evacuation simulation with multi-agent system approach using netmas for
   contingency planning (meulaboh case study).
 \newblock In: Proc. of 5th Annual International Workshop \& Expo on Sumatra
   Tsunami Disaster \& Recovery 2010, p. ??? AIWEST-2010 (2010)
-
-\bibitem{osogami2013ibm}
-Osogami, T., Imamichi, T., Mizuta, H., Morimura, T., Raymond, R., Suzumura, T.,
-  Takahashi, R., Ide, T.: Ibm mega traffic simulator.
-\newblock IBM Research and Development Journal  (2013)
 
 \bibitem{osogami2013toward}
 Osogami, T., Imamichi, T., Mizuta, H., Suzumura, T., Ide, T.: Toward simulating
@@ -131,16 +148,22 @@ Takeuchi, M., Mizuta, H.: X10: Performance and productivity at scale.
 \newblock In: Poster presentation at 20th Workshop on Programming and
   Programming Languages (2018)
 
+\bibitem{ToriiIzumiYamada2016}
+Torii, T., Izumi, K., Yamada, K.: Shock transfer by arbitrage trading: analysis
+  using multi-asset artificial market.
+\newblock Evolutionary and Institutional Economics Review \textbf{12}(2),
+  395--412 (2016)
+
 \bibitem{toriiPlham}
 Torii, T., Kamada, T., Izumi, K., Yamada, K.: Platform design for large-scale
   artificial market simulation and preliminary evaluation on the k computer.
 \newblock Artificial Life and Robotics \textbf{22}(3), 301--307 (2017).
 \newblock \doi{10.1007/s10015-017-0368-z}
 
-\bibitem{murase:2014}
-Y., M., T., U., N., I.: A tool for parameter-space explorations.
-\newblock Phyisics Procedia \textbf{59}, 73--76 (2014).
-\newblock \doi{10.1016/j.phpro.2014.08.134}
+\bibitem{ToriiIzumiYamada2017}
+Torii, T., Kamada, T., Izumi, K., Yamada, K.: Platform design for large-scale
+  artificial market simulation and preliminary evaluation on the k computer.
+\newblock Artificial Life and Robotics \textbf{22}(3), 301--307 (2017)
 
 \bibitem{glb2m}
 Yamashita, K., Kamada, T.: Introducing a multithread and multistage mechanism
@@ -166,5 +189,11 @@ Yamashita, T., Soeda, S., Noda, I.: Assistance of evacuation planning with
   high-speed network model-based pedestrian simulator.
 \newblock In: Proceedings of Fifth International Conference on Pedestrian and
   Evacuation Dynamics (PED 2010), p.~58. PED 2010 (2010)
+
+\bibitem{YonenoIzumi2018}
+Yonenoh, H., Izumi, K.: Destabilization effect of var-based risk management on
+  a multiple-asset market: An artificial market approach.
+\newblock In: 23rd International Symposium on Artificial Life and Robotics
+  (AROB2018) (2018)
 
 \end{thebibliography}
