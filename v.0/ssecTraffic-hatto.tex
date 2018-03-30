@@ -6,7 +6,7 @@ Real-life urban traffic flows consists of different types of vehicles, each of w
 
 We use probe-car data provided by a taxi company in Kyoto city for a one month period including approximately 700,000 location data points recorded per day.
 %
-In general, the driver’s behavior in VACANT state is driver-determined. That is, after dropping off passenger(s), a driver can freely select next destination and mode (queuing or cruising) for picking up the next passenger(s). In contrast, the destination in OCCUPIED state is passenger-determined. Given this fact, we hypothesize that the tendency of the location that a taxi driver got passenger(s) would be one of the main characteristics of the driver. For considering that, we focused on the preferred location to pick up passenger(s) and try to classified drivers based on that. 
+In general, the driver's behavior in VACANT state is driver-determined. That is, after dropping off passenger(s), a driver can freely select next destination and mode (queuing or cruising) for picking up the next passenger(s). In contrast, the destination in OCCUPIED state is passenger-determined. Given this fact, we hypothesize that the tendency of the location that a taxi driver got passenger(s) would be one of the main characteristics of the driver. For considering that, we focused on the preferred location to pick up passenger(s) and try to classified drivers based on that. 
 
 \begin{figure}
   \centering
@@ -15,7 +15,7 @@ In general, the driver’s behavior in VACANT state is driver-determined. That i
   \label{fig:Figs.hatto/fig-hatto-01.eps}
 \end{figure}
 
-To extract popular regions to get passenger(s), we apply kernel density analysis and the mean shift clustering algorithm which are widely used for extracting POI (Point of Interest) from the two-dimensional information provided by photo geo-tagging and GPS. From the results of Kernel density analysis, we can assume that the activity range defining the average driver’s interest point is 50 seconds of longitude and latitude.  We use these values as the bandwidth for the Mean-Shift clustering algorithm so that we got 15 regions. We then calculated the ratio of picking up passenger(s) at each region. We use the ratios and the affinity propagation clustering algorithm to classify all taxi drivers. This yielded 10 clusters of driver type.
+To extract popular regions to get passenger(s), we apply kernel density analysis and the mean shift clustering algorithm which are widely used for extracting POI (Point of Interest) from the two-dimensional information provided by photo geo-tagging and GPS. From the results of Kernel density analysis, we can assume that the activity range defining the average driver's interest point is 50 seconds of longitude and latitude.  We use these values as the bandwidth for the Mean-Shift clustering algorithm so that we got 15 regions. We then calculated the ratio of picking up passenger(s) at each region. We use the ratios and the affinity propagation clustering algorithm to classify all taxi drivers. This yielded 10 clusters of driver type.
 \Figref{fig:Figs.hatto/fig-hatto-01.eps} shows the departure points for the clusters. These figures clearly indicate drivers tend to favor a specific territory for picking up passenger(s) . For example, 112 drivers for Cluster 1 tend to operate on the north side of Kyoto City. On the other hand, 33 drivers Cluster 4 are apt to go to the south side. 
 
 \begin{figure}

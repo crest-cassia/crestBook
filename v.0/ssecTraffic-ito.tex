@@ -22,12 +22,12 @@ and only nearest-neighbor communications appear.
 Parallelization of trip routings is more complicated but most trips are short range and are executed on one node using local map. 
 Time comsuming long trips are few, and their routing cost can be made negligible. 
 
-Simulation of car movements can be made very simple and also very complicated. In case of normal traffic without hazardous conditions like accidents or disasters, 
-it is sufficient to execute few arithmetic operations per car using distance to a car in front and legal speed limit, which determe appropriate velocity that the car does not crash to 
-a car in front and does not break the legal limit. 
-To the contrary, heavy operations are necessary to simulate high-resolution movements of car to study, for example, risk of traffic accidents and weather effects. 
-Hydrodynamic and/or machine engineering simulations solving PDE with high reliability in space and time will be executed. In this extreme, simulations of just one car may require 
-Exa-scale computers. 
+% Simulation of car movements can be made very simple and also very complicated. In case of normal traffic without hazardous conditions like accidents or disasters, 
+% it is sufficient to execute few arithmetic operations per car using distance to a car in front and legal speed limit, which determe appropriate velocity that the car does not crash to 
+% a car in front and does not break the legal limit. 
+% To the contrary, heavy operations are necessary to simulate high-resolution movements of car to study, for example, risk of traffic accidents and weather effects. 
+% Hydrodynamic and/or machine engineering simulations solving PDE with high reliability in space and time will be executed. In this extreme, simulations of just one car may require 
+% Exa-scale computers. 
 
 Parallelization feature of car traffic simulations with the most parallelization demanding case, that is, simulations using the simplest car movement was measures in this CASSIA project. 
 Each car continues to move along road, and turn randomly at each crossing. This means that no routing is done. This simulation model will require the lightest processing 
@@ -41,12 +41,22 @@ For another simulation of 100 million car on all-over the world with 30.9 millio
 
 This result implies that realtime or faster car-traffic simulation will be executed on the K and the future supercomputers. 
 
-\begin{table}
+\begin{figure}
+ \begin{minipage}[c]{.49\linewidth}  %{width}
  \centering
-  \includegraphics[width=.5\linewidth]{Figs.ito/allJapan.jpg}
+  \includegraphics[width=0.99\linewidth]{Figs.ito/allJapan.jpg}
   \caption{Results of strong scaling using the K computer for entire Japan traffic simulation with the simplest movements without routings are plotted.   }
   \label{itoallJapan}
-\end{table}
+ \end{minipage}~
+ \begin{minipage}[c]{.49\linewidth}  %{width}
+ \centering
+  \includegraphics[width=.5\linewidth]{Figs.ito/Factors.jpg}
+  \caption{Number of factors estimated using a factor analysis are plotted. Green curve shows square root of number of Monte Carlo samples, which is expected in the case of uniform 
+distribution of eigenvalues of correlation matrix, but this plot is interpolated by slower red curve. }
+  \label{itoFactor}
+ \end{minipage}
+\end{figure}
+
 
 %%------------------------------
 \subsubsection{Traffic factors}
@@ -70,14 +80,6 @@ Hundreds are still large, but anyway we succeeded to extract relevant factors.
 
 This is still a model analysis, but this result will suggest that we will need to measure traffic thousands times to extract the relevant factors from real traffic phenomena, 
 but real traffic will never repeat the same traffic thousands times. So we can use plausible computer simulation models to get better description of the real social phenomena. 
-
-\begin{table}
- \centering
-  \includegraphics[width=.5\linewidth]{Figs.ito/Factors.jpg}
-  \caption{Number of factors estimated using a factor analysis are plotted. Green curve shows square root of number of Monte Carlo samples, which is expected in the case of uniform 
-distribution of eigenvalues of correlation matrix, but this plot is interpolated by slower red curve. }
-  \label{itoFactor}
-\end{table}
 
 % \noindent {\bf References}
 % 
