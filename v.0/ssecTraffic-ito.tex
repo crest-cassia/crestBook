@@ -4,11 +4,13 @@
 %% - - - - - - - - - - - - - - - - - - - - - - - - -
 %(Hattori, Ito?)
 
-Car traffic is one of popular targets of social simulations, and it is applied to various objectives, for example, traffic control, city design, economic activities, and 
-environmental issues. In this CASSIA project, some traffic simulations and their analyses have been achieved not only in applications and also in basic modelings, applying and assuming 
-present and future supercomputers. 
+% Car traffic is one of popular targets of social simulations, and it is applied to various objectives, for example, traffic control, city design, economic activities, and 
+% environmental issues. In this CASSIA project, some traffic simulations and their analyses have been achieved not only in applications and also in basic modelings, applying and assuming 
+% present and future supercomputers. 
 
-\paragraph{Simulation cost and benchmark}
+%%------------------------------
+\subsubsection{Simulation cost and benchmark}
+%% - - - - - - - - - - - - - - -
 
 Traffic simulations are comprised of three parts: road map with traffic rules and regulations, 
 origin and destination(OD) sets of cars with travel routes, and movements of cars on the map 
@@ -31,7 +33,7 @@ Parallelization feature of car traffic simulations with the most parallelization
 Each car continues to move along road, and turn randomly at each crossing. This means that no routing is done. This simulation model will require the lightest processing 
 in each computer node, and the most frequent  inter-node communication. 
 Results of strong scaling of parallelized performance using the K computer up to its quarter configuration(20,736 nodes) for the traffic simulation on entire road of Japan are shown
- in Fig.~\ref{itoallJapan}. 
+ in \figref{itoallJapan}. 
 Simulations were up to 100 second and time step was 0.01 second. So totally 10,000 steps were done for about 11.7 million cars on totally 1.28 million kilometer-long  roads 
 using the ``Open Street Map''. Using the quarter nodes, simulations of 10,000 steps were executed in 11.5 second apart from the initial preparation(66.1 second), 
 and efficient parallelization is confirmed. 
@@ -46,7 +48,9 @@ This result implies that realtime or faster car-traffic simulation will be execu
   \label{itoallJapan}
 \end{table}
 
-\paragraph{Traffic factors}
+%%------------------------------
+\subsubsection{Traffic factors}
+%% - - - - - - - - - - - - - - -
 
 In traffic simulation models, numbers of input parameters and output results are enormous. Each car has several input parameters, for example, its origin, destination, 
 starting time, driving preference and also several output parameters, for example, travel duration and gas consumption. 
@@ -59,9 +63,9 @@ But it is impossible to tame a model with $10^5$ input and output.
 So the first step is to eliminate unimportant parameters and to extract relevant parameters. 
 A standard method for this purpose is the multivariate statistical analysis. 
 
-In this CASSIA project, a car-traffic model and simulator of Kobe city was developed[Ito1]. Using this simulator, Monte Carlo simulations for various OD sets satisfying a constraint 
-that daily trips be 100,000 and 70\% of the trips are coming from peripheral cities and just passing through Kobe city. A factor analysis was applied to the output flux of road segments[Ito2].  
-Numbers of estimated factors are plotted in Fig.~\ref{itoFactor}. It is observed in this Fig.~\ref{itoFactor} that thousands of samples finally clarifies hundreds of factors. 
+In this CASSIA project, a car-traffic model and simulator of Kobe city was developed \cite{Ito1}. Using this simulator, Monte Carlo simulations for various OD sets satisfying a constraint 
+that daily trips be 100,000 and 70\% of the trips are coming from peripheral cities and just passing through Kobe city. A factor analysis was applied to the output flux of road segments\cite{Ito2}.  
+Numbers of estimated factors are plotted in \figref{itoFactor}. It is observed in this \figref{itoFactor} that thousands of samples finally clarifies hundreds of factors. 
 Hundreds are still large, but anyway we succeeded to extract relevant factors. 
 
 This is still a model analysis, but this result will suggest that we will need to measure traffic thousands times to extract the relevant factors from real traffic phenomena, 
@@ -75,14 +79,13 @@ distribution of eigenvalues of correlation matrix, but this plot is interpolated
   \label{itoFactor}
 \end{table}
 
-\newpage
-
-\noindent {\bf References}
-
-\noindent [Ito1]Yuta Asano, Nobuyasu Ito, Hajime Inaoka, Tetsuo Imai and Takeshi Uchinane, Proceedings of the International Conference on Social Modeling and Simulation, plus Econophysics Colloquium 2014(Springer Proceedings in Complexity, ISBN 978-3-319-20590-8), p. 255-264, 
-{\it Traffic Simulation of Kobe-City}. 
-
-\noindent [Ito2]Takeshi Uchitane and Nobuyasu Ito, "Applying Factor Analysis to Describe Urban Scale Vehicfle Traffic Simulation Results," (in Japanese) 
-Journal of the Society of Instrument and Control Engineers vol.52 (2016) No.10 p.545-554. 
-
-%[Ito1] Hideyuki Mizuta, Takashi Imamichi, ÅgLarge-scale social simulation framework "X10-based Agent Simulation on Distributed Infrastructure (XASDI)Åh and applicationsÅh, AROB 23nd 2018 , B-Con PLAZA, Beppu. JAPAN ,Jan. 19, 2018.
+% \noindent {\bf References}
+% 
+% \noindent [Ito1]Yuta Asano, Nobuyasu Ito, Hajime Inaoka, Tetsuo Imai and Takeshi Uchinane, Proceedings of the International Conference on Social Modeling and Simulation, plus Econophysics Colloquium 2014(Springer Proceedings in Complexity, ISBN 978-3-319-20590-8), p. 255-264, 
+% {\it Traffic Simulation of Kobe-City}. 
+% 
+% \noindent [Ito2]Takeshi Uchitane and Nobuyasu Ito, "Applying Factor Analysis to Describe Urban Scale Vehicfle Traffic Simulation Results," (in Japanese) 
+% Journal of the Society of Instrument and Control Engineers vol.52 (2016) No.10 p.545-554. 
+% 
+% %[Ito1] Hideyuki Mizuta, Takashi Imamichi, ÅgLarge-scale social simulation framework "X10-based Agent Simulation on Distributed Infrastructure (XASDI)Åh and applicationsÅh, AROB 23nd 2018 , B-Con PLAZA, Beppu. JAPAN ,Jan. 19, 2018.
+% 

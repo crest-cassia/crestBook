@@ -7,6 +7,13 @@
   \providecommand{\doi}{DOI~\discretionary{}{}{}\begingroup
   \urlstyle{rm}\Url}\fi
 
+\bibitem{Ito1}
+Asano, Y., Ito, N., Inaoka, H., Imai, T., Uchinane, T.: Traffic simulation of
+  kobe-city.
+\newblock In: Proceedings of the International Conference on Social Modeling
+  and Simulation, plus Econophysics Colloquium 2014, pp. 255--264. Springer
+  (2014)
+
 \bibitem{Charles:2005:XOA:1094811.1094852}
 Charles, P., Grothoff, C., Saraswat, V., Donawa, C., Kielstra, A., Ebcioglu,
   K., von Praun, C., Sarkar, V.: X10: An object-oriented approach to
@@ -17,27 +24,20 @@ Charles, P., Grothoff, C., Saraswat, V., Donawa, C., Kielstra, A., Ebcioglu,
 \newblock \doi{10.1145/1094811.1094852}.
 \newblock \urlprefix\url{http://doi.acm.org/10.1145/1094811.1094852}
 
-\bibitem{arob17plham}
-Fujishima, D., Kamada, T., Torii, T., Izumi, K.: Overlapping communication and
-  computation for large-scale artificial market simulation.
-\newblock In: Proc. of 22nd International Symposium on Artificial Life and
-  Robotics (AROB 2017), pp. 708--713. Beppu, Japan (2017)
-
 \bibitem{deb:nsga}
-K., D., S., A., A., P., T., M.: A fast elitist non-dominated sorting genetic
-  algorithm for multi-objective optimization: Nsga-ii.
+Deb, K., Agrawal, S., Pratap, A., Meyarivan, T.: A fast elitist non-dominated
+  sorting genetic algorithm for multi-objective optimization: Nsga-ii.
 \newblock In: S.M. et~al (ed.) PPSN VI Proceedings of the 6th International
   Conference on Parallel Problem Solving from Nature, \emph{Lecture Notes in
   Computer Science}, vol. 1917, pp. 849--858. Springer, Berlin, Heidelberg
   (2000).
 \newblock \doi{10.1007/3-540-45356-3\_83}
 
-\bibitem{kobayashi:2016}
-K., K., R., N., Y., Y., K., F.: Experimental analyses of the evacuation
-  planning model using lexicographically quickest flow [in japanese].
-\newblock Transactions of the Operations Research Society of Japan \textbf{59},
-  86--105 (2016).
-\newblock \doi{10.15807/torsj.59.86}
+\bibitem{arob17plham}
+Fujishima, D., Kamada, T., Torii, T., Izumi, K.: Overlapping communication and
+  computation for large-scale artificial market simulation.
+\newblock In: Proc. of 22nd International Symposium on Artificial Life and
+  Robotics (AROB 2017), pp. 708--713. Beppu, Japan (2017)
 
 \bibitem{Kawakubo2014a}
 Kawakubo, S., Izumi, K., Yoshimura, S.: Analysis of an option market dynamics
@@ -45,6 +45,14 @@ Kawakubo, S., Izumi, K., Yoshimura, S.: Analysis of an option market dynamics
 \newblock Int. J. Intell. Syst. Acc. Fin. Mgmt. \textbf{21},
   105^^e2^^80^^93--128 (2014).
 \newblock \doi{10.1002/isaf.1353}
+
+\bibitem{kobayashi:2016}
+Kobayashi, K., Narisawa, R., Yasui, Y., Fujisawa, K.: Experimental analyses of
+  the evacuation planning model using lexicographically quickest flow (in
+  japanese).
+\newblock Transactions of the Operations Research Society of Japan \textbf{59},
+  86--105 (2016).
+\newblock \doi{10.15807/torsj.59.86}
 
 \bibitem{Noda2018b}
 Matsushima, H., Noda, I.: Analysis of trade-off in evacuation plan using
@@ -120,17 +128,6 @@ Saraswat, V., Bloom, B., Peshansky, I., Tardieu, O., Grove, D.: X10 Language
   Specification Version 2.6.1 (2017).
 \newblock \urlprefix\url{http://x10-lang.org/}
 
-\bibitem{yamashita:2014a}
-T., Y., S., S., M., O., I., N.: Development and application of high-speed
-  evacuation simulator with one-dimensional pedestrian model.
-\newblock Jpournal of Information Processing Society Japan \textbf{53}(7),
-  1732--1744 (2012)
-
-\bibitem{yamashita:2013}
-T., Y., T., O., I., N.: Implementation of simulation environment for exhaustive
-  analysis of huge-scale pedestrian flow.
-\newblock SICE JCMSI \textbf{6}(2), 137--146 (2013)
-
 \bibitem{Takeuchi:2013:JIM:2481268.2481278}
 Takeuchi, M., Cunningham, D., Grove, D., Saraswat, V.: Java interoperability in
   managed x10.
@@ -169,6 +166,12 @@ Torii, T., Kamada, T., Izumi, K., Yamada, K.: Platform design for large-scale
   artificial market simulation and preliminary evaluation on the k computer.
 \newblock Artificial Life and Robotics \textbf{22}(3), 301--307 (2017)
 
+\bibitem{Ito2}
+Uchitane, T., Ito, N.: Applying factor analysis to describe urban scale
+  vehicfle traffic simulation results (in japanese).
+\newblock Journal of the Society of Instrument and Control Engineers
+  \textbf{52}(10), 545--554 (2016)
+
 \bibitem{glb2m}
 Yamashita, K., Kamada, T.: Introducing a multithread and multistage mechanism
   for the global load balancing library of x10.
@@ -180,6 +183,11 @@ Yamashita, T., Matsushima, H., Noda, I.: Exhaustive analysis with a pedestrian
   simulation environment for assistant of evacuation planning.
 \newblock In: Prof. of PED 2014, pp. SE05--3 (2014).
 \newblock \doi{https://doi.org/10.1016/j.trpro.2014.09.047}
+
+\bibitem{yamashita:2013}
+Yamashita, T., Okada, T., Noda, I.: Implementation of simulation environment
+  for exhaustive analysis of huge-scale pedestrian flow.
+\newblock SICE JCMSI \textbf{6}(2), 137--146 (2013)
 
 \bibitem{Noda2009x}
 Yamashita, T., Soeda, S., Noda, I.: Evacuation planning assist system with
@@ -193,6 +201,12 @@ Yamashita, T., Soeda, S., Noda, I.: Assistance of evacuation planning with
   high-speed network model-based pedestrian simulator.
 \newblock In: Proceedings of Fifth International Conference on Pedestrian and
   Evacuation Dynamics (PED 2010), p.~58. PED 2010 (2010)
+
+\bibitem{yamashita:2014a}
+Yamashita, T., Soeda, S., Onishi, M., Noda, I.: Development and application of
+  high-speed evacuation simulator with one-dimensional pedestrian model.
+\newblock Jpournal of Information Processing Society Japan \textbf{53}(7),
+  1732--1744 (2012)
 
 \bibitem{YonenoIzumi2018}
 Yonenoh, H., Izumi, K.: Destabilization effect of var-based risk management on
