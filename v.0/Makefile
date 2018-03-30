@@ -37,3 +37,6 @@ pdf: $(addsuffix .pdf,$(TARGET))
 main.dvi : $(SUBSOURCE)
 
 
+##--------------------------------------------------
+pack :
+	zip -r ~/crestBook_ChapNoda.zip .
